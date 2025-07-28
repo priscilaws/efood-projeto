@@ -1,13 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
 export const colors = {
-  white: "#FFFAF4",
-  black: "#44403D",
-  aqua: "#16C1C9",
-  orange: "#FE960F",
-  brick: "#e29354",
-  navy: "#075F85",
-  peach: "#FFE7C5",
+  coral: "#E66767",
+  begeDark: "#FFEBD9",
+  bege: "#FFF8F2",
+  white: "#ffffff",
 };
 
 export const GlobalCss = createGlobalStyle`
@@ -20,7 +17,7 @@ font-size: 24px;
 }
 
 body {
-background-color:${colors.white};
-color:${colors.black};
+background-color:${colors.bege};
+color:${colors.coral};
 }
 `;
