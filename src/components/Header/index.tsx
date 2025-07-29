@@ -1,13 +1,11 @@
 import { HeaderBar, LogoIcon } from "./styles";
 
-import logo from "../../assets/logos/logo-1.svg";
-import icon from "../../assets/icons/aumiau-icon-color.svg";
+import logo from "../../assets/logos/logo.svg";
 
 const Header = () => (
   <HeaderBar>
-    <img src={logo} alt="aumiau market" />
-    <LogoIcon src={icon} alt="aumiau logo pata animal" />
-    <p>Receitas aprovadas por focinhos exigentes.</p>
+    <LogoIcon src={logo} alt="logo efood" />
+    <p>Viva experiências gastronômicas no conforto da sua casa</p>
   </HeaderBar>
 );
 
