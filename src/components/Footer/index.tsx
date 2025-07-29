@@ -1,24 +1,28 @@
-import logo from "../../assets/logos/logo-1-1.svg";
-import iconInsta from "../../assets/icons/instagram-round-svgrepo-com (1) 1.svg";
-import iconFacebook from "../../assets/icons/facebook-round-svgrepo-com 1.svg";
-import iconTwiter from "../../assets/icons/twitter-2-svgrepo-com 1.svg";
+// src/components/Footer/index.tsx
+import React from "react";
+import { FooterContainer, Logo, SocialIcons, Text, Icon } from "./styles";
 
-import { Container, Icon } from "./styles";
+import logo from "../../assets/logos/logo.svg";
+import instagram from "../../assets/icons/instagram.svg";
+import facebook from "../../assets/icons/facebook.svg";
+import twitter from "../../assets/icons/twitter.svg";
 
-const Footer = () => (
-  <Container>
-    <img src={logo} alt="aumiau logo" />
-    <div className="container">
-      <Icon src={iconInsta} alt="" />
-      <Icon src={iconFacebook} alt="" />
-      <Icon src={iconTwiter} alt="" />
-    </div>
-    <h4>
-      Na Aumiau, criamos alimentos naturais com ingredientes selecionados e
-      muito carinho. A qualidade e a entrega dos nossos produtos são 100% por
-      nossa conta.
-    </h4>
-  </Container>
-);
+const Footer = () => {
+  return (
+    <FooterContainer>
+      <Logo src={logo} alt="efood logo" />
+      <SocialIcons>
+        <Icon src={instagram} alt="Instagram" />
+        <Icon src={facebook} alt="Facebook" />
+        <Icon src={twitter} alt="Twitter" />
+      </SocialIcons>
+      <Text>
+        A efood é uma plataforma para divulgação de estabelecimentos, a
+        responsabilidade pela entrega, qualidade dos produtos é toda do
+        estabelecimento contratado.
+      </Text>
+    </FooterContainer>
+  );
+};
 
 export default Footer;

@@ -7,9 +7,6 @@ import {
   redirect,
   RouterProvider,
 } from "react-router-dom";
-import ProductsList from "./components/CategoryList";
-import ProdutosPage from "./pages/Products";
-import HomePage from "./pages/Home";
 
 const router = createBrowserRouter([
   {
@@ -18,11 +15,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <> </>,
       },
       {
         path: "produtos",
-        element: <ProdutosPage />,
+        element: <></>,
       },
     ],
   },
