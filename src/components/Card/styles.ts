@@ -3,7 +3,6 @@ import { colors } from "../../styles";
 
 export const Card = styled.div`
   background-color: ${colors.white};
-  border: 1px solid ${colors.coral};
   overflow: hidden;
   width: 472px;
 `;
@@ -12,7 +11,6 @@ export const Image = styled.img`
   width: 100%;
   height: 217px;
   object-fit: cover;
-  border: none;
 `;
 
 export const TagsContainer = styled.div`
@@ -21,6 +19,7 @@ export const TagsContainer = styled.div`
   right: 8px;
   display: flex;
   gap: 8px;
+  border: 1px solid ${colors.coral};
 `;
 
 export const CardContainer = styled.div`

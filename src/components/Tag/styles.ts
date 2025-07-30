@@ -9,4 +9,5 @@ export const TagContainer = styled.span`
   padding: 4px 8px;
   border-radius: 4px;
   margin-left: 8px;
+  gap: 8px;
 `;

@@ -14,6 +14,7 @@ import {
 import estrela from "../../assets/icons/estrela.svg";
 import Tag from "../Tag";
 import Button from "../Button";
+import { TagContainer } from "../Tag/styles";
 
 type Props = {
   image: string;
@@ -36,11 +37,11 @@ const RestaurantCard = ({
     <Card>
       <CardContainer>
         <Image src={image} alt={title} />
-        <TagsContainer>
+        <TagContainer>
           {tags.map((tag) => (
             <Tag key={tag}>{tag}</Tag>
           ))}
-        </TagsContainer>
+        </TagContainer>
       </CardContainer>
 
       <Info>
