@@ -15,15 +15,15 @@ export const Image = styled.img`
 
 export const TagsContainer = styled.div`
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 16px;
+  right: 16px;
   display: flex;
   gap: 8px;
-  border: 1px solid ${colors.coral};
 `;
 
 export const CardContainer = styled.div`
   position: relative;
+  line-height: 0;
 `;
 
 export const CardList = styled.div`
@@ -38,13 +38,21 @@ export const CardList = styled.div`
 
 export const Info = styled.div`
   padding: 16px;
+  border: 1px solid ${colors.coral};
+  border-top: 0;
+`;
+
+export const InfoHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
 `;
 
 export const Title = styled.h3`
   color: ${colors.coral};
   font-size: 18px;
   font-weight: bold;
-  margin: 0 0 8px 0;
 `;
 
 export const Description = styled.p`

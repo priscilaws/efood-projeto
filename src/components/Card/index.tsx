@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import {
   Card,
   Image,
@@ -9,55 +9,47 @@ import {
   Star,
   Info,
   CardContainer,
-} from "./styles";
+  InfoHeader,
+} from './styles'
 
-import estrela from "../../assets/icons/estrela.svg";
-import Tag from "../Tag";
-import Button from "../Button";
-import { TagContainer } from "../Tag/styles";
+import estrela from '../../assets/icons/estrela.svg'
+import Tag from '../Tag'
+import Button from '../Button'
 
 type Props = {
-  image: string;
-  title: string;
-  description: string;
-  rating: number;
-  starIcon: string;
-  tags: string[];
-};
+  image: string
+  title: string
+  description: string
+  rating: number
+  tags: string[]
+}
 
-const RestaurantCard = ({
-  image,
-  title,
-  description,
-  rating,
-  starIcon,
-  tags,
-}: Props) => {
+const RestaurantCard = ({ image, title, description, rating, tags }: Props) => {
   return (
     <Card>
       <CardContainer>
         <Image src={image} alt={title} />
-        <TagContainer>
+        <TagsContainer>
           {tags.map((tag) => (
             <Tag key={tag}>{tag}</Tag>
           ))}
-        </TagContainer>
+        </TagsContainer>
       </CardContainer>
 
       <Info>
-        <div>
+        <InfoHeader>
           <Title>{title}</Title>
           <Rating>
             {rating.toFixed(1)}
             <Star src={estrela} alt="estrela" />
           </Rating>
-        </div>
+        </InfoHeader>
 
         <Description>{description}</Description>
         <Button>Saiba mais</Button>
       </Info>
     </Card>
-  );
-};
+  )
+}
 
-export default RestaurantCard;
+export default RestaurantCard
