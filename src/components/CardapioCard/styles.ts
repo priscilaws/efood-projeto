@@ -47,4 +47,5 @@ export const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 32px;
   justify-content: center;
+  margin: 0 170px 120px 170px;
 `

@@ -7,7 +7,6 @@ export const TagContainer = styled.span`
   font-weight: 700;
   font-size: 12px;
   padding: 4px 8px;
-  border-radius: 4px;
-  margin-left: 8px;
   gap: 8px;
+  line-height: 1.5;
 `;

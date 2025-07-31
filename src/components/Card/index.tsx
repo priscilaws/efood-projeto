@@ -15,6 +15,7 @@ import {
 import estrela from '../../assets/icons/estrela.svg'
 import Tag from '../Tag'
 import Button from '../Button'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {
   image: string
@@ -25,6 +26,8 @@ type Props = {
 }
 
 const RestaurantCard = ({ image, title, description, rating, tags }: Props) => {
+  const navigate = useNavigate()
+
   return (
     <Card>
       <CardContainer>
@@ -46,7 +49,7 @@ const RestaurantCard = ({ image, title, description, rating, tags }: Props) => {
         </InfoHeader>
 
         <Description>{description}</Description>
-        <Button>Saiba mais</Button>
+        <Button onClick={() => navigate('/cardapio')}>Saiba mais</Button>
       </Info>
     </Card>
   )
