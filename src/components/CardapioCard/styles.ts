@@ -45,8 +45,6 @@ export const Wrapper = styled.div`
   width: 100%;
   max-width: 1024px;
   margin: 0 auto 120px auto;
-  padding: 0 16px;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;

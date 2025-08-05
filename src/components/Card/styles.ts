@@ -31,7 +31,7 @@ export const CardList = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px 48px;
+  gap: 48px 80px;
   margin: 80px auto 120px auto;
   justify-items: center;
 `
