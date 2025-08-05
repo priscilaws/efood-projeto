@@ -9,7 +9,8 @@ export const HeaderContainer = styled.header`
 `
 
 export const HeaderContent = styled.div`
-  margin: 0 170px;
+  max-width: 1024px;
+  margin: 0 auto; // <-- centraliza o conteúdo horizontalmente
   display: flex;
   align-items: center;
   justify-content: space-between;

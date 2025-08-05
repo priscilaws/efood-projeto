@@ -42,10 +42,13 @@ export const CardButton = styled.button`
 `
 
 export const Wrapper = styled.div`
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto 120px auto;
+  padding: 0 16px;
+
   display: grid;
-  place-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
-  justify-content: center;
-  margin: 0 170px 120px 170px;
+  place-items: center;
 `
