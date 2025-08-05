@@ -1,4 +1,4 @@
-import { BannerContainer, Category, Title } from './styles'
+import { BannerContainer, Category, Title, BannerContent } from './styles'
 
 type BannerProps = {
   backgroundImage: string
@@ -9,8 +9,10 @@ type BannerProps = {
 export const Banner = ({ backgroundImage, category, title }: BannerProps) => {
   return (
     <BannerContainer style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <Category>{category}</Category>
-      <Title>{title}</Title>
+      <BannerContent>
+        <Category>{category}</Category>
+        <Title>{title}</Title>
+      </BannerContent>
     </BannerContainer>
   )
 }

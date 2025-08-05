@@ -1,4 +1,3 @@
-// src/components/Banner/styles.ts
 import styled from 'styled-components'
 
 export const BannerContainer = styled.div`
@@ -7,29 +6,28 @@ export const BannerContainer = styled.div`
   background-position: center;
   height: 280px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 32px;
+  align-items: flex-end;
   color: white;
   font-weight: bold;
   overflow: hidden;
   margin-bottom: 52px;
 `
 
+export const BannerContent = styled.div`
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 32px;
+  padding-right: 16px;
+`
+
 export const Category = styled.span`
-  position: absolute;
-  top: 16px;
-  left: 32px;
+  display: block;
   font-weight: 200;
-  border-radius: 4px;
-  font-size: 14px;
-  z-index: 1;
-  margin-left: 170px;
+  font-size: 32px;
+  margin-bottom: 156px;
 `
 
 export const Title = styled.h2`
   font-size: 32px;
-  z-index: 1;
-  position: relative;
-  margin-left: 170px;
 `
