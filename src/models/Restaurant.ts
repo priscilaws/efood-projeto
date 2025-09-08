@@ -1,26 +1,21 @@
-class Restaurant {
+export type Cardapio = {
+  foto: string
+  preco: number
   id: number
-  image: string
-  rating: number
-  title: string
-  description: string
-  tags: string[]
-
-  constructor(
-    id: number,
-    image: string,
-    rating: number,
-    title: string,
-    description: string,
-    tags: string[]
-  ) {
-    this.id = id
-    this.image = image
-    this.rating = rating
-    this.title = title
-    this.description = description
-    this.tags = tags
-  }
+  nome: string
+  descricao: string
+  porcao: string
 }
 
-export default Restaurant
+type Restaurante = {
+  id: number
+  titulo: string
+  destacado: boolean
+  tipo: string
+  avaliacao: number
+  descricao: string
+  capa: string
+  cardapio: Cardapio[]
+}
+
+export default Restaurante

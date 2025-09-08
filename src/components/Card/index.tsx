@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Card,
   Image,
@@ -16,40 +15,39 @@ import estrela from '../../assets/icons/estrela.svg'
 import Tag from '../Tag'
 import Button from '../Button'
 import { useNavigate } from 'react-router-dom'
+import Restaurante from '../../models/Restaurant'
 
 type Props = {
-  image: string
-  title: string
-  description: string
-  rating: number
-  tags: string[]
+  restaurante: Restaurante
 }
 
-const RestaurantCard = ({ image, title, description, rating, tags }: Props) => {
+const RestaurantCard = ({ restaurante }: Props) => {
   const navigate = useNavigate()
 
   return (
     <Card>
       <CardContainer>
-        <Image src={image} alt={title} />
+        <Image src={restaurante.capa} alt={restaurante.titulo} />
         <TagsContainer>
-          {tags.map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
-          ))}
+          <Tag>{restaurante.tipo}</Tag>
         </TagsContainer>
       </CardContainer>
 
       <Info>
         <InfoHeader>
-          <Title>{title}</Title>
+          <Title>{restaurante.titulo}</Title>
           <Rating>
-            {rating.toFixed(1)}
+            {restaurante.avaliacao.toFixed(1)}
             <Star src={estrela} alt="estrela" />
           </Rating>
         </InfoHeader>
 
-        <Description>{description}</Description>
-        <Button onClick={() => navigate('/cardapio')}>Saiba mais</Button>
+        <Description>{restaurante.descricao}</Description>
+        <Button
+          onClick={() => navigate(`/restaurante/${restaurante.id}/cardapio`)}
+        >
+          Saiba mais
+        </Button>
       </Info>
     </Card>
   )

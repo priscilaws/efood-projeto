@@ -12,7 +12,10 @@ export const CardContainer = styled.div`
 `
 
 export const CardImage = styled.img`
+  width: 100%;
   max-width: 100%;
+  object-fit: cover;
+  height: 167px;
   margin-bottom: 8px;
 `
 
