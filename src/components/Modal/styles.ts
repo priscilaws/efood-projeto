@@ -60,13 +60,14 @@ export const Description = styled.p`
 `
 
 export const Portion = styled.span`
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 16px;
 `
 
 export const AddButton = styled.button`
   background: ${colors.begeDark};
   color: ${colors.coral};
+  font-size: 14px;
   border: none;
   padding: 8px 16px;
   font-weight: bold;
