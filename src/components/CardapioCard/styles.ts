@@ -32,6 +32,7 @@ export const CardDescription = styled.p`
 export const CardButton = styled.button`
   background-color: ${colors.begeDark};
   color: ${colors.coral};
+  font-size: 14px;
   border: none;
   padding: 8px 16px;
   cursor: pointer;
