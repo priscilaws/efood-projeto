@@ -2,7 +2,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home/Home'
 import Cardapio from './pages/Menu/Cardapio'
 import { GlobalCss } from './styles'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
   },
 
   {
-    path: '/cardapio',
+    path: 'restaurante/:id/cardapio',
     element: <Cardapio />,
   },
 ])
