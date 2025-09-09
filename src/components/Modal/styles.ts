@@ -69,7 +69,7 @@ export const AddButton = styled.button`
   color: ${colors.coral};
   font-size: 14px;
   border: none;
-  padding: 8px 16px;
+  padding: 4px 8px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s;
