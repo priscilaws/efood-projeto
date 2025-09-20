@@ -19,7 +19,7 @@ type ModalProps = {
   onAddToCart: () => void
 }
 
-function formatarPreco(preco: number) {
+export function formatarPreco(preco: number) {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',

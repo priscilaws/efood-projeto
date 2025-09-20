@@ -1,11 +1,11 @@
 // src/components/Footer/index.tsx
-import React from "react";
-import { FooterContainer, Logo, SocialIcons, Text, Icon } from "./styles";
+import React from 'react'
+import { FooterContainer, Logo, SocialIcons, Text, Icon } from './styles'
 
-import logo from "../../assets/logos/logo.svg";
-import instagram from "../../assets/icons/instagram.svg";
-import facebook from "../../assets/icons/facebook.svg";
-import twitter from "../../assets/icons/twitter.svg";
+import logo from '../../assets/logos/logo.svg'
+import instagram from '../../assets/icons/instagram.svg'
+import facebook from '../../assets/icons/facebook.svg'
+import twitter from '../../assets/icons/twitter.svg'
 
 const Footer = () => {
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
         estabelecimento contratado.
       </Text>
     </FooterContainer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

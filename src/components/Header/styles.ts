@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors } from "../../styles";
+import styled from 'styled-components'
+import { colors } from '../../styles'
 
 export const HeaderBar = styled.header`
   background-color: ${colors.begeDark};
@@ -11,13 +11,13 @@ export const HeaderBar = styled.header`
 
   p {
     font-size: 36px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     width: 50%;
     text-align: center;
   }
-`;
+`
 
 export const LogoIcon = styled.img`
   height: 60px;
-`;
+`

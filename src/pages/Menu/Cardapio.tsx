@@ -3,25 +3,17 @@ import CardapioHeader from '../../components/CardapioHeader'
 import { Wrapper } from '../../components/CardapioCard/styles'
 import { Banner } from '../../components/Banner'
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import Restaurante from '../../models/Restaurant'
+import { useGetRestaurantByIdQuery } from '../../services/api'
+import { useDispatch } from 'react-redux'
+import { add, open } from '../../store/reducers/cart'
 
 const Cardapio = () => {
+  const dispatch = useDispatch()
   const { id } = useParams()
-  const [restaurante, setRestaurante] = useState<Restaurante | null>(null)
+  const { data: restaurante } = useGetRestaurantByIdQuery(id!)
 
-  console.log({ restaurante })
-
-  useEffect(() => {
-    if (id) {
-      fetch(`https://ebac-fake-api.vercel.app/api/efood/restaurantes/${id}`)
-        .then((res) => res.json())
-        .then((restaurant) => setRestaurante(restaurant))
-    }
-  }, [id])
-
-  if (restaurante === null) {
-    return null
+  if (!restaurante) {
+    return <h3>Carregando...</h3>
   }
 
   return (
@@ -38,7 +30,8 @@ const Cardapio = () => {
             key={itemCardapio.id}
             cardapio={itemCardapio}
             onAddToCart={() => {
-              console.log('Adicionado ao carrinho!')
+              dispatch(add(itemCardapio))
+              dispatch(open())
             }}
           />
         ))}

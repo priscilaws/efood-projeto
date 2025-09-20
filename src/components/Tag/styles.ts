@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors } from "../../styles";
+import styled from 'styled-components'
+import { colors } from '../../styles'
 
 export const TagContainer = styled.span`
   background-color: ${colors.coral};
@@ -9,4 +9,4 @@ export const TagContainer = styled.span`
   padding: 4px 8px;
   gap: 8px;
   line-height: 1.5;
-`;
+`

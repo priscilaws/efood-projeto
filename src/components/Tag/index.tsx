@@ -1,12 +1,12 @@
-import React from "react";
-import { TagContainer } from "./styles";
+import React from 'react'
+import { TagContainer } from './styles'
 
 type Props = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
 const Tag = ({ children }: Props) => {
-  return <TagContainer>{children}</TagContainer>;
-};
+  return <TagContainer>{children}</TagContainer>
+}
 
-export default Tag;
+export default Tag

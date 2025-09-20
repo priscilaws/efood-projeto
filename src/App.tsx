@@ -2,7 +2,10 @@ import Footer from './components/Footer'
 import Home from './pages/Home/Home'
 import Cardapio from './pages/Menu/Cardapio'
 import { GlobalCss } from './styles'
-import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { store } from './store'
+import Cart from './components/Cart'
 
 const router = createBrowserRouter([
   {
@@ -21,7 +24,10 @@ function App() {
     <>
       <GlobalCss />
 
-      <RouterProvider router={router} />
+      <Provider store={store}>
+        <RouterProvider router={router} />
+        <Cart />
+      </Provider>
 
       <Footer />
     </>

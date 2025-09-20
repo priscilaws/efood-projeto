@@ -17,9 +17,11 @@ export const HeaderContent = styled.div`
   padding-top: 40px;
   padding-bottom: 64px;
 
-  h4 {
+  button {
+    all: unset;
     font-weight: 700;
     font-size: 18px;
+    cursor: pointer;
   }
 
   img {
