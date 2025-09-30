@@ -2,13 +2,14 @@ import { MenuCard } from '../../components/CardapioCard'
 import CardapioHeader from '../../components/CardapioHeader'
 import { Wrapper } from '../../components/CardapioCard/styles'
 import { Banner } from '../../components/Banner'
-import { useParams } from 'react-router-dom'
+import { Outlet, useNavigate, useParams } from 'react-router-dom'
 import { useGetRestaurantByIdQuery } from '../../services/api'
 import { useDispatch } from 'react-redux'
-import { add, open } from '../../store/reducers/cart'
+import { add } from '../../store/reducers/cart'
 
 const Cardapio = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const { id } = useParams()
   const { data: restaurante } = useGetRestaurantByIdQuery(id!)
 
@@ -31,11 +32,13 @@ const Cardapio = () => {
             cardapio={itemCardapio}
             onAddToCart={() => {
               dispatch(add(itemCardapio))
-              dispatch(open())
+              navigate('carrinho')
             }}
           />
         ))}
       </Wrapper>
+
+      <Outlet />
     </>
   )
 }

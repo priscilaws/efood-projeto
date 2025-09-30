@@ -11,19 +11,13 @@ import {
   AddButton,
 } from './styles'
 import { Cardapio } from '../../models/Restaurant'
+import { formatPriceBRL } from '../../utils'
 
 type ModalProps = {
   isOpen: boolean
   onClose: () => void
   cardapio: Cardapio
   onAddToCart: () => void
-}
-
-export function formatarPreco(preco: number) {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-  }).format(preco)
 }
 
 export const Modal = ({
@@ -52,7 +46,7 @@ export const Modal = ({
           <Description>{cardapio.descricao}</Description>
           <Portion>Serve: {cardapio.porcao}</Portion>
           <AddButton onClick={onAddToCart}>
-            Adicionar ao carrinho - {formatarPreco(cardapio.preco)}
+            Adicionar ao carrinho - {formatPriceBRL(cardapio.preco)}
           </AddButton>
         </Content>
       </ModalContainer>

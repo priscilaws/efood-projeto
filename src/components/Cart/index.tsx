@@ -1,7 +1,3 @@
-import Button from '../Button'
-
-import foto from '../../assets/images/massa-1.png'
-
 import {
   Overlay,
   CartContainer,
@@ -13,16 +9,18 @@ import {
 } from './styles'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
-import { close, remove } from '../../store/reducers/cart'
-import { formatarPreco } from '../Modal'
+import { remove } from '../../store/reducers/cart'
+import { formatPriceBRL } from '../../utils'
+import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
-  const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
+  const { items } = useSelector((state: RootReducer) => state.cart)
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const closeCart = () => {
-    dispatch(close())
+    navigate('../')
   }
 
   const getTotalPrice = () => {
@@ -35,8 +33,12 @@ const Cart = () => {
     dispatch(remove(id))
   }
 
+  const goToCheckout = () => {
+    navigate('../endereco')
+  }
+
   return (
-    <CartContainer className={isOpen ? 'is-open' : ''}>
+    <CartContainer className="is-open">
       <Overlay onClick={closeCart} />
       <Sidebar>
         <CartWrapper>
@@ -45,7 +47,7 @@ const Cart = () => {
               <img src={item.foto} alt={item.nome} />
               <div>
                 <h3>{item.nome}</h3>
-                <span>{formatarPreco(item.preco)}</span>
+                <span>{formatPriceBRL(item.preco)}</span>
               </div>
               <button onClick={() => removeItem(item.id)} type="button" />
             </CartItem>
@@ -53,9 +55,9 @@ const Cart = () => {
         </CartWrapper>
         <Prices>
           <span>Valor Total </span>
-          <span>{formatarPreco(getTotalPrice())}</span>
+          <span>{formatPriceBRL(getTotalPrice())}</span>
         </Prices>
-        <ButtonCart>Continuar com a compra</ButtonCart>
+        <ButtonCart onClick={goToCheckout}>Continuar com a compra</ButtonCart>
       </Sidebar>
     </CartContainer>
   )
